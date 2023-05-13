@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>To Do List</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <section class="card">
+    <div class="tools">
+      <div class="circle">
+        <span class="red box"></span>
+      </div>
+      <div class="circle">
+        <span class="yellow box"></span>
+      </div>
+      <div class="circle">
+        <span class="green box"></span>
+      </div>
+    </div>
+
+    <article class="card__content">
+      <h1>Estas son mis tareas por hacer</h1>
+      <div>
+        <ul id="to-dos-container">
+          <li>Ir a la Universidad</li>
+          <li>Ejercicio de Web</li>
+          <li>Taller Grupal</li>
+          <li>Ir a mercar</li>
+          <li>Pagar el agua</li>
+        </ul>
+      </div>
+      <div id="add-task">
+        <h2>Agrega una nueva tarea</h2>
+        <div>
+          <input type="text" name="todo" id="input-todo" class="input">
+          <button id="create-todo">
+            <span>Agregar</span>
+          </button>
+        </div>
+      </div>
+    </article>
+
+
+  </section>
+  <script type="module" src="/main.js"></script>
+</body>
+
+</html>

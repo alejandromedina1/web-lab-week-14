@@ -1,0 +1,138 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body{
+  margin-top: 10%;
+}
+
+h1{
+  font-weight: 600;
+  font-size: 24px;
+  color: #3b8ee0;
+}
+h2{
+  font-weight: 500;
+  font-size: 16px;
+  color: #3b8ee0;
+}
+
+li{
+  cursor: pointer;
+  margin: 4px;
+  color: #4493e2;
+}
+
+ul{
+  list-style-type:none;
+}
+
+.card {
+  width: 30%;
+  height: 500px;
+  margin: 0 auto;
+  background-color: #F8FBFE;
+  border-radius: 8px;
+  z-index: 1;
+
+  box-shadow: 10px 10px 20px 0 #cde2f7;
+ }
+ 
+ .tools {
+  display: flex;
+  align-items: center;
+  padding: 9px;
+ }
+ 
+ .circle {
+  padding: 0 4px;
+ }
+ 
+ .box {
+  display: inline-block;
+  align-items: center;
+  width: 10px;
+  height: 10px;
+  padding: 1px;
+  border-radius: 50%;
+ }
+ 
+ .red {
+  background-color: #ff605c;
+ }
+ 
+ .yellow {
+  background-color: #ffbd44;
+ }
+ 
+ .green {
+  background-color: #00ca4e;
+ }
+
+ .card__content{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 40px;
+ }
+
+ #add-task{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+ }
+
+ .input {
+  width: 200px;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 2px 2px 7px 0 #dde7f1;
+  outline: none;
+  color: dimgray;
+  font-size: 14px;
+}
+
+
+button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #0663c0;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 14px;
+  padding: 12px;
+  width: 130px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+ }
+ 
+ button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+ }
+ 
+ button span:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -15px;
+  transition: 0.5s;
+ }
+ 
+ button:hover span {
+  padding-right: 15px;
+ }
+ 
+ button:hover span:after {
+  opacity: 1;
+  right: 0;
+ }
