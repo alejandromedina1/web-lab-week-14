@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+</head>
+<body>
+    <h1>Crea una cuenta</h1>
+    <form action="submit" id="sign-up-form">
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email-input">
+        <label for="username">Username:</label>
+        <input type="text" name="username" id="username-input">
+        <label for="email">Birthday:</label>
+        <input type="date" name="birthday" id="birthday-input">
+        <label for="picture">Profile Picture:</label>
+        <input type="file" accept="image/*" name="picture" id="birthday-input">
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password-input">
+        <label for="conf">Confirm password:</label>
+        <input type="password" name="conf" id="conf-password-input">
+        <button id="form-button">Crear Cuenta</button>
+    </form>
+    <p>¿Ya tienes una cuenta? <a href="/login/"> Inicia sesión</a></p>
+    <script type="module" src="./sign-up.js"></script>
+</body>
+</html>
