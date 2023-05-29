@@ -125,11 +125,27 @@ export async function logInUser(email, password) {
     try {
         const userCredential = await signInWithEmailAndPassword(auth, email, password)
         const user = userCredential.user;
-        return {status: true, info: user.id}
+        return {
+            status: true,
+            info: user.id
+        }
 
     } catch (error) {
         const errorCode = error.code;
         const errorMessage = error.message;
-        return {status: false, info: errorMessage}
+        return {
+            status: false,
+            info: errorMessage
+        }
     };
 }
+
+export async function userIsLoggedIn(accesRoute, loginRoute) {
+    const user = await db.auth().onAuthStateChanged()
+    if (user) {
+        window.location.href = accesRoute
+    } else {
+        window.location.href = loginRoute;
+    }
+}
+

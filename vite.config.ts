@@ -1,5 +1,6 @@
 import { resolve } from 'path'
 import { defineConfig } from 'vite'
+import { userIsLoggedIn } from './firebase'
 
 const root = resolve(__dirname, './')
 const outDir = resolve(__dirname, 'dist')
@@ -12,11 +13,13 @@ export default defineConfig({
     emptyOutDir: true,
     rollupOptions: {
       input: {
-        main: resolve(root, 'index.html'),
+        main: resolve(root, 'login', 'index.html'),
         "sign-up": resolve(root, 'sign-up', 'index.html'),
-        "login": resolve(root, 'login', 'index.html'),
+        "login": resolve(root, 'index.html'),
       }
     },
     target: 'esnext'
   }
 })
+
+userIsLoggedIn(resolve(root, 'login', 'index.html'), resolve(root, 'index.html'))

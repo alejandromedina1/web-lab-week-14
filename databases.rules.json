@@ -1,0 +1,9 @@
+{
+    "rules": {
+      "index.html": {
+        ".read": "auth != null",
+        ".write": "auth != null"
+      }
+    }
+  }
+  

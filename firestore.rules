@@ -1,0 +1,9 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Regla para permitir acceso a la colección "rutas-protegidas" solo a usuarios autenticados
+    match /rutas-protegidas/{document} {
+      allow read, write: if request.auth != null;
+    }
+  }
+}
